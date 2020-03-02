@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Input() {
+function InputForm(props) {
     return (
         <div>
-            
+            <input ref = {props.refLinkInput} type="text"/>
         </div>
     );
 }
 
-export default Input;
+export default InputForm;

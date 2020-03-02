@@ -1,12 +1,8 @@
-import React from 'react';
-import Name from './Name/Name.jsx';
-
-function App() {
-    return (
-        <div>
-            <Name/>
-        </div>
-    );
+.app {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    border: 1px solid;
+    align-content: center;
 }
-
-export default App;

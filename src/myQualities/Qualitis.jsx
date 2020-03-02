@@ -1,12 +1,17 @@
 import React from 'react';
-import styles from './Quality.module.css';
+import styles from './Qualiti.module.css';
+import Quality from "./Qualiti";
 
-function Quality(props) {
-    return (
-        <div className={styles.Quality}>
-            {this.props}
-        </div>
-    );
+class Qualitys extends React.Component {
+    state = ['bImon', 'e', 'ruch'];
+
+    render() {
+        const componentaQualitys = this.state.map((el, key) => <Quality quality={el} key = {key}/>)
+        return (
+            <div className={styles.Qualiti}>
+                {componentaQualitys}
+            </div>);
+    }
 }
 
-export default Quality;
+export default Qualitys;

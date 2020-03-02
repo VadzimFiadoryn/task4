@@ -1,15 +1,16 @@
 import React from 'react';
-import Name from './Name/Name.jsx';
-import styles from './App.module.css';
-import Qualitys from "./myQualities/Qualitis";
+import InputForm from "./InputForm";
+import InputButton from "./InputButton";
 
-function App() {
-    return (
-        <div className={styles.app}>
-            <Name/>
-            <Qualitys/>
-        </div>
-    );
+class Input extends React.Component {
+    render() {
+        return (
+            <div>
+                <InputForm refLinkInput={this.props.refLinkInput}/>
+                <InputButton updateData= {this.props.updateData}/>
+            </div>
+        );
+    }
 }
 
-export default App;
+export default Input;

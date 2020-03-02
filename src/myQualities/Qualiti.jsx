@@ -1,12 +1,12 @@
 import React from 'react';
-import styles from './Name.module.css';
+import styles from './Qualiti.module.css';
 
-function Name() {
+function Quality(props) {
     return (
-        <div className={styles.Name}>
-            VADIM
+        <div className={styles.Qualiti}>
+            {props.quality}
         </div>
     );
 }
 
-export default Name;
+export default Quality;
