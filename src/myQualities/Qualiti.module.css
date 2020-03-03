@@ -1,5 +1,6 @@
-.Qualiti{
-   width: 360px;
-   display: flex;
-   justify-content: center;
+.Qualiti {
+    width: 120px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
 }

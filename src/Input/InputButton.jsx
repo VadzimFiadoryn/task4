@@ -1,11 +1,11 @@
 import React from 'react';
 
-function Input() {
+function InputButton(props) {
     return (
         <div>
-            
+            <button onClick={() => props.updateData()}>ADD</button>
         </div>
     );
 }
 
-export default Input;
+export default InputButton;

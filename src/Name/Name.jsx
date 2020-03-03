@@ -1,12 +1,12 @@
 import React from 'react';
-import './App.module.css';
+import styles from './Name.module.css';
 
-function App() {
-  return (
-    <div className="App">
-
-    </div>
-  );
+function Name() {
+    return (
+        <div className={styles.Name}>
+            VADIM
+        </div>
+    );
 }
 
-export default App;
+export default Name;
