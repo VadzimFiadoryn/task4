@@ -1,10 +1,10 @@
 import React from 'react';
-import styles from './Qualiti.module.css';
+import styles from './Quality.module.css';
 
 function Quality(props) {
     return (
-        <div className={styles.Qualiti}>
-            {props.quality}
+        <div className={styles.Quality}>
+            {props.el}
         </div>
     );
 }

@@ -1,31 +1,38 @@
 import React from 'react';
-import Name from './Name/Name.jsx';
 import styles from './App.module.css';
-import Qualitys from "./myQualities/Qualitis";
-import Input from "./Input/Input";
+import NawBar from "./NawBar/NawBar";
+import {BrowserRouter, HashRouter} from "react-router-dom";
+import FirstTask from "./FirstTask/FirstTask";
+import Home from "./Home/Home";
+import Switch from "react-router-dom/es/Switch";
+import Route from "react-router-dom/es/Route";
 
 class App extends React.Component {
-    state = {Names: []};
-    refLinkInput = React.createRef();
-    updateData = () => {
-        let newName = this.refLinkInput.current.value;
-        let namesArr = [...this.state.Names, newName]
-        this.setState({Names: namesArr})
-        this.refLinkInput.current.value = "";
+    state = {
+        infoPage: '',
+        path1: ''
     };
 
+    SetNewPath = (path) => {
+        this.setState({
+            path1: path
+        })
+    }
+
     render() {
-        const newNemes =
-            this.state.Names.map((el, key) => <div key={key}>{el} </div>)
         return (
-            <div className={styles.app}>
-                <Name/>
-                <div>
-                <Qualitys/>
-                <Input updateData={this.updateData} refLinkInput={this.refLinkInput}/>
-                {newNemes}
-                </div>
-            </div>
+            <HashRouter>
+                <Switch>
+                    <div className={styles.app}>
+                        <NawBar SetNewPath={this.SetNewPath}/>
+                        <div>
+                            <Route path="/Home" component={Home}/>
+                            <Route path="/FirstTask" component={FirstTask}/>
+                            <Route path="/SecondTask" component={FirstTask}/>
+                        </div>
+                    </div>
+                </Switch>
+            </HashRouter>
         );
     }
 }

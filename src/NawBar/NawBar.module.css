@@ -1,0 +1,12 @@
+.Hidden {
+    background-color: red;
+    padding: 20px;
+}
+
+.Show {
+    background-color: blue;
+}
+
+.activeLink {
+    color: gold;
+}

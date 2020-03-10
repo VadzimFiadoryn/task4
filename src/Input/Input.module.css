@@ -1,5 +1,12 @@
 .Input {
     display: flex;
     flex-wrap: wrap;
-    justify-content: center;
+}
+
+.ErrorRed {
+    border-color: red;
+}
+
+.InputBlue {
+    border-color: blue;
 }

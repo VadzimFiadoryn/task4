@@ -1,9 +1,9 @@
 import React from 'react';
-
+import Input from "./Input";
 function InputForm(props) {
     return (
         <div>
-            <input ref = {props.refLinkInput} type="text"/>
+            <Input refLinkInput={props.refLinkInput} updateData={props.updateData}/>
         </div>
     );
 }
