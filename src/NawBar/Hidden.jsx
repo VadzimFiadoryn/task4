@@ -11,13 +11,14 @@ class Hidden extends React.Component {
     render() {
         return (
             <div className={styles.Hidden}>
-                {"HIDDEN"}
-                <br/>
-                <NavLink to= "/Home" activeClassName ={styles.activeLink} onClick={() => this.SetNewPath('/Home')}> Home </NavLink>
-                <br/>
-                <NavLink to= "/FirstTask" activeClassName ={styles.activeLink} onClick={() => this.SetNewPath('/FirstTask')}> FirstTask </NavLink>
-                <br/>
-                <NavLink to= "/SecondTask" activeClassName ={styles.activeLink} onClick={() => this.SetNewPath('/SecondTask')}> SecondTask </NavLink>
+                <NavLink to="/Home" activeClassName={styles.activeLink}
+                         onClick={() => this.SetNewPath('/Home')}> Home </NavLink>
+
+                <NavLink to="/FirstTask" activeClassName={styles.activeLink}
+                         onClick={() => this.SetNewPath('/FirstTask')}> FirstTask </NavLink>
+
+                <NavLink to="/SecondTask" activeClassName={styles.activeLink}
+                         onClick={() => this.SetNewPath('/SecondTask')}> SecondTask </NavLink>
             </div>
         );
     }

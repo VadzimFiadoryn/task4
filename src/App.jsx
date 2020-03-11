@@ -22,16 +22,14 @@ class App extends React.Component {
     render() {
         return (
             <HashRouter>
-                <Switch>
-                    <div className={styles.app}>
-                        <NawBar SetNewPath={this.SetNewPath}/>
-                        <div>
-                            <Route path="/Home" component={Home}/>
-                            <Route path="/FirstTask" component={FirstTask}/>
-                            <Route path="/SecondTask" component={FirstTask}/>
-                        </div>
-                    </div>
-                </Switch>
+                <div  className={styles.app}>
+                    <NawBar SetNewPath={this.SetNewPath} className ={styles.NawBar}/>
+                    <Switch>
+                        <Route path="/Home" component={Home}/>
+                        <Route path="/FirstTask" component={FirstTask}/>
+                        <Route path="/SecondTask" component={FirstTask}/>
+                    </Switch>
+                </div>
             </HashRouter>
         );
     }

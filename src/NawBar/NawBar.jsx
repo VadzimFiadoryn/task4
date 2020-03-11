@@ -15,13 +15,15 @@ class NawBar extends React.Component {
         return (
             <div>
                 {this.state.isHidden && <span
-                    onClick={() => this.changeStateNawBar()}>
-                    <Hidden SetNewPath={this.props.SetNewPath}/>
-                </span>}
+                    onClick={() => this.changeStateNawBar()}
+                    className={styles.Hidden}>
+                    {">"}
+                    </span>
+                || <Hidden SetNewPath={this.props.SetNewPath}/>}
                 {!this.state.isHidden && <span
                     onClick={() => this.changeStateNawBar()}
                     className={styles.Show}>
-                    S<br/>H<br/>O<br/>W</span>}
+                    {"<"} </span>}
             </div>
 
         )

@@ -1,10 +1,13 @@
 .Hidden {
-    background-color: red;
-    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    color: red;
 }
 
 .Show {
-    background-color: blue;
+    display: flex;
+    flex-direction: column;
+    color: blue;
 }
 
 .activeLink {

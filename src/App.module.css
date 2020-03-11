@@ -1,10 +1,14 @@
 .app {
     display: flex;
-    flex-wrap: wrap;
 }
 
 .FirstTask {
     display: flex;
     border: 1px solid;
     flex-direction: column;
+}
+.NawBar {
+    display: flex;
+    flex-direction: column;
+    width: 150px;
 }
