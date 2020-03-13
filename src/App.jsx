@@ -6,6 +6,7 @@ import FirstTask from "./FirstTask/FirstTask";
 import Home from "./Home/Home";
 import Switch from "react-router-dom/es/Switch";
 import Route from "react-router-dom/es/Route";
+import SecondTask from "./SecondTask/SecondTask";
 
 class App extends React.Component {
     state = {
@@ -27,7 +28,7 @@ class App extends React.Component {
                     <Switch>
                         <Route path="/Home" component={Home}/>
                         <Route path="/FirstTask" component={FirstTask}/>
-                        <Route path="/SecondTask" component={FirstTask}/>
+                        <Route path="/SecondTask" component={SecondTask}/>
                     </Switch>
                 </div>
             </HashRouter>
