@@ -63,19 +63,16 @@ class SecondTask extends React.Component {
                 return {...t, ...obj}
             }
         })
-        debugger
         this.setState({tasks: newTasks}, () => {
             saveState(this.state)
         })
     };
 
     changeStatus =(taskId, status)=> {
-        debugger
         this.change(taskId, {isDone: status})
     };
 
     changeTitle = (taskId, title) => {
-        debugger
         this.change(taskId, {title: title})
     }
 
