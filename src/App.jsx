@@ -1,11 +1,9 @@
 import React from 'react';
 import styles from './App.module.css';
 import NawBar from "./NawBar/NawBar";
-import {BrowserRouter, HashRouter} from "react-router-dom";
+import {HashRouter,Switch,Route} from "react-router-dom";
 import FirstTask from "./FirstTask/FirstTask";
 import Home from "./Home/Home";
-import Switch from "react-router-dom/es/Switch";
-import Route from "react-router-dom/es/Route";
 import SecondTask from "./SecondTask/SecondTask";
 
 class App extends React.Component {

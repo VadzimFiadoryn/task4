@@ -6,7 +6,8 @@ class TodoListTask extends React.Component {
         editMode: false
     }
     onIsDoneChanged = (e) => {
-        this.props.changeStatus(this.props.task.id, e.currentTarget.checked)
+       // this.props.changeStatus(this.props.task.id, e.currentTarget.checked)
+        alert(e.currentTarget.checked)
     }
     activateEditMode = () => {
         this.setState({editMode: true})
@@ -15,8 +16,12 @@ class TodoListTask extends React.Component {
     this.setState({editMode: false})
     }
     onChangeTitle =(e) =>{
-      this.props.ChangeTitle(this.props.task.id,e.currentTarget.value)
+      this.props.changeTitle(this.props.task.id,e.currentTarget.value)
    }
+
+    onChangeStatus = (e) => {
+        this.props.changeStatus(this.props.task.id,e.currentTarget.checked)
+    }
 
 
     render = () => {
@@ -25,7 +30,7 @@ class TodoListTask extends React.Component {
                 <input
                     type={'checkbox'}
                     checked={this.props.task.isDone}
-                    onChange={this.onIsDoneChanged}/>
+                    onChange={this.onChangeStatus}/>
                 <button onClick={()=> this.props.deleteTask(this.props.task.id)}>DEL</button>
                 {this.state.editMode
                     ? <input value={this.props.task.title}

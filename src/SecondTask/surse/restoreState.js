@@ -13,5 +13,4 @@ const restoreState = () => {
     return state;
 }
 
-
 export default restoreState;

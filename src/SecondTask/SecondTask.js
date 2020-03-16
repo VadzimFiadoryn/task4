@@ -36,7 +36,6 @@ class SecondTask extends React.Component {
             isDone: false,
             priority: 'low'
         }
-        /*let newTasks=this.state.tasks.push(newTask) */
         this.nextTaskId++
         let newTasks = [...this.state.tasks, newTask]
         this.setState({tasks: newTasks}, () => {
@@ -56,40 +55,28 @@ class SecondTask extends React.Component {
         })
     }
 
-    changeTask = (taskId, obj) => {
-        obj = this.state.tasks.map(t => {
+    change = (taskId, obj) => {
+        let newTasks = this.state.tasks.map(t => {
             if (t.id !== taskId) {
                 return t
             } else {
-                return {...t, title: obj}
+                return {...t, ...obj}
             }
         })
-        this.setState({tasks: obj}, () => {
+        debugger
+        this.setState({tasks: newTasks}, () => {
             saveState(this.state)
         })
-    }
+    };
 
-    // saveState = () => {
-    //     let stateAsString = JSON.stringify(this.state);
-    //     localStorage.setItem("our-state", stateAsString);
-    // }
+    changeStatus =(taskId, status)=> {
+        debugger
+        this.change(taskId, {isDone: status})
+    };
 
-    restoreState = () => {
-        let state = {
-            tasks: [],
-            filterValue: "All"
-        }
-        let stateAsString = localStorage.getItem("our-state");
-        if (stateAsString != null) {
-            state = JSON.parse(stateAsString);
-        }
-        this.setState(state, () => {
-            this.state.tasks.forEach(t => {
-                if (t.id >= this.nextTaskId) {
-                    this.nextTaskId = t.id + 1
-                }
-            })
-        })
+    changeTitle = (taskId, title) => {
+        debugger
+        this.change(taskId, {title: title})
     }
 
     render = () => {
@@ -99,8 +86,8 @@ class SecondTask extends React.Component {
                     <TodoListHeader addTask={this.addTask}/>
                     <TodoListTasks
                         deleteTask={this.deleteTask}
-                        ChangeTitle={this.changeTask}
-                        changeStatus={this.changeTask}
+                        changeTitle={this.changeTitle}
+                        changeStatus={this.changeStatus}
                         tasks={this.state.tasks.filter(t => {
                             if (this.state.filterValue === 'Active') {
                                 return !t.isDone
