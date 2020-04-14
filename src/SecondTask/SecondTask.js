@@ -5,6 +5,7 @@ import TodoListTasks from "./TodoListTasks";
 import TodoListFooter from "./TodoListFooter";
 import saveState from "./surse/saveState";
 import restoreState from "./surse/restoreState";
+import Selector from "./Selector/Selector";
 
 class SecondTask extends React.Component {
     constructor(props) {
@@ -81,6 +82,7 @@ class SecondTask extends React.Component {
             <div className="App">
                 <div className="todoList">
                     <TodoListHeader addTask={this.addTask}/>
+                    <Selector/>
                     <TodoListTasks
                         deleteTask={this.deleteTask}
                         changeTitle={this.changeTitle}

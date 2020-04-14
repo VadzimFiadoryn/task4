@@ -6,21 +6,21 @@ class TodoListTask extends React.Component {
         editMode: false
     }
     onIsDoneChanged = (e) => {
-       // this.props.changeStatus(this.props.task.id, e.currentTarget.checked)
+        // this.props.changeStatus(this.props.task.id, e.currentTarget.checked)
         alert(e.currentTarget.checked)
     }
     activateEditMode = () => {
         this.setState({editMode: true})
     }
     diactivateEditMode = () => {
-    this.setState({editMode: false})
+        this.setState({editMode: false})
     }
-    onChangeTitle =(e) =>{
-      this.props.changeTitle(this.props.task.id,e.currentTarget.value)
-   }
+    onChangeTitle = (e) => {
+        this.props.changeTitle(this.props.task.id, e.currentTarget.value)
+    }
 
     onChangeStatus = (e) => {
-        this.props.changeStatus(this.props.task.id,e.currentTarget.checked)
+        this.props.changeStatus(this.props.task.id, e.currentTarget.checked)
     }
 
 
@@ -31,19 +31,22 @@ class TodoListTask extends React.Component {
                     type={'checkbox'}
                     checked={this.props.task.isDone}
                     onChange={this.onChangeStatus}/>
-                <button onClick={()=> this.props.deleteTask(this.props.task.id)}>DEL</button>
+
                 {this.state.editMode
                     ? <input value={this.props.task.title}
-                       autoFocus={true}
-                       onBlur={this.diactivateEditMode}
-                       onChange={this.onChangeTitle}/>
+                             autoFocus={true}
+                             onBlur={this.diactivateEditMode}
+                             onChange={this.onChangeTitle}/>
                     : <span onClick={this.activateEditMode}>
 
                         {this.props.task.id} -
                         {this.props.task.title}
                         - priority: {this.props.task.priority}
                 </span>}
-
+                <button
+                    onClick={() => this.props.deleteTask(this.props.task.id)}>
+                    X
+                </button>
             </div>
         );
     }
