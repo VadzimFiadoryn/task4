@@ -1,0 +1,12 @@
+.Input {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.ErrorRed {
+    border-color: red;
+}
+
+.InputBlue {
+    border-color: blue;
+}

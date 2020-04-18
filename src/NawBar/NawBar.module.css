@@ -1,0 +1,15 @@
+.Hidden {
+    display: flex;
+    flex-direction: column;
+    color: red;
+}
+
+.Show {
+    display: flex;
+    flex-direction: column;
+    color: blue;
+}
+
+.activeLink {
+    color: gold;
+}
