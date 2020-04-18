@@ -1,5 +1,6 @@
 import React from 'react';
 import PropType from 'prop-types';
+import SelectListTask from "./Selector/SelectListTask";
 
 class TodoListTask extends React.Component {
     state = {
@@ -43,6 +44,8 @@ class TodoListTask extends React.Component {
                         {this.props.task.title}
                         - priority: {this.props.task.priority}
                 </span>}
+                <SelectListTask changePriorityList ={this.props.changePriorityList}
+                                id ={this.props.task.id}/>
                 <button
                     onClick={() => this.props.deleteTask(this.props.task.id)}>
                     X

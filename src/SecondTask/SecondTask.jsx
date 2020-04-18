@@ -95,6 +95,10 @@ class SecondTask extends React.Component {
         })
     }
 
+    changePriorityList = (taskId, priority) => {   //2 var
+        this.change(taskId, {priority: priority})
+    }
+
     render = () => {
         //alert(this.state.loading)
         return (
@@ -107,6 +111,7 @@ class SecondTask extends React.Component {
                             <TodoListHeader addTask={this.addTask}/>
                             <Selector changePriority={this.changePriority}/>
                             <TodoListTasks
+                                changePriorityList ={this.changePriorityList}
                                 deleteTask={this.deleteTask}
                                 changeTitle={this.changeTitle}
                                 changeStatus={this.changeStatus}
